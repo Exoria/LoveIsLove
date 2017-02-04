@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 7bf5c55016336e84584c5b3940098583
-timeCreated: 1486222894
+timeCreated: 1486230830
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -16,17 +16,17 @@ TextureImporter:
     21300018: LeftRun6
     21300020: LeftRun7
     21300022: LeftRun8
-    21300024: orc_elite_12
-    21300026: orc_elite_13
-    21300028: orc_elite_14
-    21300030: orc_elite_15
-    21300032: orc_elite_16
-    21300034: orc_elite_17
-    21300036: orc_elite_18
-    21300038: orc_elite_19
-    21300040: orc_elite_20
-    21300042: orc_elite_21
-    21300044: orc_elite_22
+    21300024: LeftHit1
+    21300026: LeftHit2
+    21300028: LeftHit3
+    21300030: LeftHit4
+    21300032: LeftDie1
+    21300034: LeftDie2
+    21300036: LeftDie3
+    21300038: LeftDie4
+    21300040: LeftDie5
+    21300042: LeftDie6
+    21300044: LeftDie7
     21300046: orc_elite_23
     21300048: orc_elite_24
     21300050: orc_elite_25
@@ -482,7 +482,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: orc_elite_12
+      name: LeftHit1
       rect:
         serializedVersion: 2
         x: 1578
@@ -495,7 +495,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: orc_elite_13
+      name: LeftHit2
       rect:
         serializedVersion: 2
         x: 1701
@@ -508,7 +508,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: orc_elite_14
+      name: LeftHit3
       rect:
         serializedVersion: 2
         x: 1801
@@ -521,7 +521,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: orc_elite_15
+      name: LeftHit4
       rect:
         serializedVersion: 2
         x: 1925
@@ -534,7 +534,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: orc_elite_16
+      name: LeftDie1
       rect:
         serializedVersion: 2
         x: 2083
@@ -547,7 +547,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: orc_elite_17
+      name: LeftDie2
       rect:
         serializedVersion: 2
         x: 2208
@@ -560,7 +560,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: orc_elite_18
+      name: LeftDie3
       rect:
         serializedVersion: 2
         x: 2341
@@ -573,7 +573,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: orc_elite_19
+      name: LeftDie4
       rect:
         serializedVersion: 2
         x: 2471
@@ -586,7 +586,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: orc_elite_20
+      name: LeftDie5
       rect:
         serializedVersion: 2
         x: 2605
@@ -599,7 +599,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: orc_elite_21
+      name: LeftDie6
       rect:
         serializedVersion: 2
         x: 2728
@@ -612,7 +612,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: orc_elite_22
+      name: LeftDie7
       rect:
         serializedVersion: 2
         x: 2855
