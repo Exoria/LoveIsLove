@@ -15,7 +15,7 @@ class UVadjust : EditorWindow
     void OnGUI()
     {
         GUILayout.Label("Scale", EditorStyles.boldLabel);
-		mScale = EditorGUILayout.Slider ("Value", mScale, 0.001f, 999.9f);
+		mScale = EditorGUILayout.Slider ("Value", mScale, 0.1f, 5.0f);
 		if (GUILayout.Button ("Apply")) {
 			
 			foreach(GameObject obj in Selection.gameObjects) {
@@ -29,9 +29,26 @@ class UVadjust : EditorWindow
 
 				Vector3 tmp = new Vector3();
 
-				for(int i=0; i<mesh.vertexCount; ++i) {
-					tmp = obj.transform.TransformVector (mesh.vertices[i]);
-					uv [i] = new Vector3 (tmp.x*mScale, tmp.z*mScale, 0);
+				for (int j = 0; j < mesh.triangles.Length; j += 3) {
+
+					Vector3 N = mesh.normals [mesh.triangles[j]];
+					float up = Mathf.Abs( Vector3.Dot (N, Vector3.up));
+					float fw = Mathf.Abs( Vector3.Dot (N, Vector3.forward));
+					float rh = Mathf.Abs( Vector3.Dot (N, Vector3.right));
+
+					for(int i=j; i<j+3; ++i) {
+						int id = mesh.triangles[i];
+
+						tmp = obj.transform.TransformVector (mesh.vertices[id]);
+
+						if (up > fw && up > rh) {
+							uv [id] = new Vector3 (tmp.x*mScale, tmp.z*mScale, 0);
+						} else if (fw > rh) {
+							uv [id] = new Vector3 (tmp.x*mScale, tmp.y*mScale, 0);
+						} else {
+							uv [id] = new Vector3 (tmp.y*mScale, tmp.z*mScale, 0);
+						}
+					}
 				}
 
 				mesh.SetUVs (0, uv);
