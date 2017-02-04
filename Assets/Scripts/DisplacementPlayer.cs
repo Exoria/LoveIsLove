@@ -15,10 +15,21 @@ public class DisplacementPlayer : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if(Input.GetAxis("Horizontal") > 0 || Input.GetAxis("Vertical") > 0)
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
-            var move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
-            transform.position += move * m_speed * Time.deltaTime;
+            transform.position += Vector3.left * m_speed * Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.position += Vector3.right * m_speed * Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            transform.position += Vector3.forward * m_speed * Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.position += Vector3.back * m_speed * Time.deltaTime;
         }
     }
 }
